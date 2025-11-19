@@ -1,0 +1,34 @@
+import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
+import { getStorage } from 'firebase/storage';
+
+// const firebaseConfig = {
+//   apiKey: "SUA_API_KEY_AQUI",
+//   authDomain: "nge-transportes.firebaseapp.com",
+//   projectId: "nge-transportes",
+//   storageBucket: "nge-transportes.appspot.com",
+//   messagingSenderId: "SEU_MESSAGING_SENDER_ID",
+//   appId: "SEU_APP_ID"
+// };
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAt_5JefPf0Zttsq_wY4WpyZ2Tgs7v4PDM",
+  authDomain: "nge-transportes.firebaseapp.com",
+  databaseURL: "https://nge-transportes-default-rtdb.firebaseio.com",
+  projectId: FIREBASE_PROJECT_ID,
+  storageBucket: "nge-transportes.firebasestorage.app",
+  messagingSenderId: "159030382623",
+  appId: process.env.FIREBASE_APP_ID,
+  measurementId: "G-9D3HSV5B0X"
+};
+
+
+const app = initializeApp(firebaseConfig);
+
+export const auth = getAuth(app);
+export const db = getFirestore(app);
+export const storage = getStorage(app);
+
+export default app;
+

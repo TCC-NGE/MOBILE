@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "NGE",
+    "slug": "NGE",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "extra": {
+      "firebaseProjectId": "nge-transportes",
+      "firebaseAppId": "1:159030382623:web:b4e62d7dffe76d226e452a",
+      "firebaseApiKey": "AIzaSyAt_5JefPf0Zttsq_wY4WpyZ2Tgs7v4PDM"
+    },
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-font",
+      "expo-asset"
+    ]
+  }
+}

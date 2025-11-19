@@ -17,7 +17,7 @@ bool Permitido = false; //Variável que verifica a permissão
 //Vetor responsável por armazenar os ID's das Tag's cadastradas
 String TagsCadastradas[] = {"e364ce34",
                             "1234",
-                            "ID_3"};
+                            " 1"};
 MFRC522 LeitorRFID(SS_PIN, RST_PIN);    // Cria uma nova instância para o leitor e passa os pinos como parâmetro
 void setup() {
         Serial.begin(9600);           // Inicializa a comunicação Serial
@@ -56,6 +56,7 @@ void Leitura(){
         for (int i = 0; i < (sizeof(TagsCadastradas)/sizeof(String)); i++) {
           if(  IDtag.equalsIgnoreCase(TagsCadastradas[i])  ){
               Permitido = true; //Variável Permitido assume valor verdadeiro caso o ID Lido esteja cadastrado
+             
           }
         }      
         if(Permitido == true) acessoLiberado(); //Se a variável Permitido for verdadeira será chamada a função acessoLiberado()        
@@ -81,7 +82,7 @@ void acessoNegado(){
   lcd.clear();
   lcd.print("Acesso Negado:(");
     efeitoNegado();
-    Permitido = true; //Chama a função efeitoNegado()
+   
 }
 void efeitoPermitido(){  
   int qtd_bips = 2; //definindo a quantidade de bips

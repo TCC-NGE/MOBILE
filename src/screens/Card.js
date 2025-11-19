@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Text, StyleSheet, TouchableOpacity, View, Image } from 'react-native';
 import RNPickerSelect from 'react-native-picker-select';
+import { readNdef } from './NFC'
+import { COLORS } from '../constants/colors';
 
 export default function Card({ navigation, route }) {
     const [passe, setPasse] = useState('comum');
@@ -45,6 +47,9 @@ export default function Card({ navigation, route }) {
                 />
             </View>
             <Image style={styles.card} source={cardImage} />
+            <TouchableOpacity style={styles.nfcButton} onPress={readNdef}>
+                <Text>Scan a Tag</Text>
+            </TouchableOpacity>
             <View style={styles.infoContainer}>
                 <Text style={styles.infoText}>
                     Tipo de Passe: {cardOptions.find(c => c.value === passe)?.label ?? 'Não selecionado'}
@@ -103,6 +108,9 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontSize: 18,
         fontFamily: 'Poppins_400Regular',
+    },
+    nfcButton: {
+        color: '#FFF',
     }
 });
 

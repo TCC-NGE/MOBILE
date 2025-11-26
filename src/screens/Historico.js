@@ -59,23 +59,96 @@ export default function Historico({ navigation, route }) {
             <View style={styles.totaisCard}>
                 <View style={styles.totalItem}>
                     <Text style={styles.totalLabel}>Total de Viagens</Text>
-                    <Text style={styles.totalValor}>{totalViagens}</Text>
+                    <Text style={styles.totalValor}>3</Text>
                 </View>
                 <View style={styles.divisor} />
                 <View style={styles.totalItem}>
                     <Text style={styles.totalLabel}>Total Gasto</Text>
                     <Text style={[styles.totalValor, { color: '#FF6B6B' }]}>
-                        R$ {totalGasto.toFixed(2)}
+                        R$ 17,60
                     </Text>
                 </View>
             </View>
 
             <ScrollView
-                style={styles.listaContainer}
-                refreshControl={
-                    <RefreshControl refreshing={atualizando} onRefresh={atualizarHistorico} />
-                }
-            >
+                 style={styles.listaContainer}
+                 refreshControl={
+                     <RefreshControl refreshing={atualizando} onRefresh={atualizarHistorico} />
+                     }
+                     >
+                        <View style={styles.viagemCard}>
+                            <View style={styles.viagemHeader}>
+                                <View style={styles.viagemIcone}>
+                                    <Text style={styles.viagemIconeTexto}>🚍</Text>
+                                </View>
+                                <View style={styles.viagemInfo}>
+                                    <Text style={styles.viagemLinha}>Linha 280</Text>
+                                    <Text style={styles.viagemEmpresa}> Transurc</Text>
+                                </View>
+                                <View style={styles.viagemValorContainer}>
+                                    <Text style={styles.viagemValor}>- R$ 5,70</Text>
+                                    <Text style={styles.viagemTipo}></Text>
+                                </View>
+                            </View>
+                            <View style={styles.viagemFooter}>
+                                <Text style={styles.viagemData}>
+                                    📅 02/11/25
+                                </Text>
+                                <View style={styles.viagemStatus}>
+                                    <View style={styles.statusIndicador} />
+                                    <Text style={styles.statusTexto}> Validada </Text>
+                                </View>
+                            </View>
+                        </View>
+                        <View style={styles.viagemCard}>
+                            <View style={styles.viagemHeader}>
+                                <View style={styles.viagemIcone}>
+                                    <Text style={styles.viagemIconeTexto}>🚍</Text>
+                                </View>
+                                <View style={styles.viagemInfo}>
+                                    <Text style={styles.viagemLinha}>Linha 674</Text>
+                                    <Text style={styles.viagemEmpresa}> EMTU</Text>
+                                </View>
+                                <View style={styles.viagemValorContainer}>
+                                    <Text style={styles.viagemValor}>- R$ 6,20</Text>
+                                    <Text style={styles.viagemTipo}></Text>
+                                </View>
+                            </View>
+                            <View style={styles.viagemFooter}>
+                                <Text style={styles.viagemData}>
+                                    📅 25/10/25
+                                </Text>
+                                <View style={styles.viagemStatus}>
+                                    <View style={styles.statusIndicador} />
+                                    <Text style={styles.statusTexto}> Validada </Text>
+                                </View>
+                            </View>
+                        </View>
+                        <View style={styles.viagemCard}>
+                            <View style={styles.viagemHeader}>
+                                <View style={styles.viagemIcone}>
+                                    <Text style={styles.viagemIconeTexto}>🚍</Text>
+                                </View>
+                                <View style={styles.viagemInfo}>
+                                    <Text style={styles.viagemLinha}>Linha 260</Text>
+                                    <Text style={styles.viagemEmpresa}> Transurc</Text>
+                                </View>
+                                <View style={styles.viagemValorContainer}>
+                                    <Text style={styles.viagemValor}>- R$ 5,70</Text>
+                                    <Text style={styles.viagemTipo}></Text>
+                                </View>
+                            </View>
+                            <View style={styles.viagemFooter}>
+                                <Text style={styles.viagemData}>
+                                    📅 11/10/25
+                                </Text>
+                                <View style={styles.viagemStatus}>
+                                    <View style={styles.statusIndicador} />
+                                    <Text style={styles.statusTexto}> Validada </Text>
+                                </View>
+                            </View>
+                        </View>
+                     {/*
                 {historico.length === 0 ? (
                     <View style={styles.semDados}>
                         <Text style={styles.semDadosIcone}>🚌</Text>
@@ -111,8 +184,8 @@ export default function Historico({ navigation, route }) {
                             </View>
                         </View>
                     ))
-                )}
-            </ScrollView>
+                )} */}
+            </ScrollView> 
         </View>
     );
 }
